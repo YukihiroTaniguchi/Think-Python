@@ -41,3 +41,26 @@ def ack(m, n):
 
 
 print('ack(3, 4) is', ack(3, 4))
+
+print('--------4')
+
+def is_power(a, b):
+    if a == b:
+        return True
+    if a % b == 0 and is_power(a / b, b):
+        return True
+    return False
+
+
+print('is_power(9, 3) is', is_power(9, 3))
+
+
+print('--------5')
+
+def gcd(a, b):
+    if a % b == 0:
+        return b
+    gcd_num = gcd(b, a % b)
+    return gcd_num
+
+print('gcd(1649, 221)', gcd(1649, 221))
